@@ -21,6 +21,7 @@
       <td>締日　<%= @last_day.to_s(:date) %></td>
     </tr>
   </table>
+  <%= link_to "勤怠を編集", edit_attendances_path(@user, @first_day), class: "btn btn-primary" %>
   <table class = "table-bordered table-striped table-condensed">
     <thead>
       <tr> <!--rowspan:縦結合、colspan：横結合-->
@@ -71,6 +72,7 @@
               <% @total_seconds = @total_seconds.to_i + seconds %>
             <% end %>
           </td>
+          <td><%= day.note %></td>
         </tr>
       <% end %>
     </tbody>

@@ -9,11 +9,7 @@ class UsersController < ApplicationController
 
   def show
   @user = User.find(params[:id])
-  if params[:first_day].nil?
-    @first_day = Date.today.beginning_of_month
-  else
-    @first_day = Date.parse(params[:first_day])
-  end
+  @first_day = first_day(params[:first_day])
   @last_day = @first_day.end_of_month
   (@first_day..@last_day).each do |day|
     unless @user.attendances.any? {|attendance| attendance.worked_on == day}
@@ -21,7 +17,7 @@ class UsersController < ApplicationController
       record.save
     end
   end
-  @dates = @user.attendances.where('worked_on >= ? and worked_on <= ?', @first_day, @last_day).order('worked_on')
+  @dates = user_attendances_month_date
   @worked_sum = @dates.where.not(started_at: nil).count
   end
   
