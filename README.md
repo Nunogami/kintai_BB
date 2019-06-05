@@ -7,3 +7,7 @@
 <!--</h1>-->
 
 # rails s
+# Attendance.new(id: 3, worked_on: "2019-05-02", started_at: "2019-05-02 18:00:00", finished_at: "2019-05-02 08:00:00", note: "", user_id: 1)
+# attendance = Attendance.new(id: 3, worked_on: "2019-05-02", started_at: "2019-05-02 18:00:00", finished_at: "2019-05-02 08:00:00", note: "", user_id: 1)
+# attendance.save
+# attendance.errors.full_messages
