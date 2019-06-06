@@ -43,15 +43,12 @@
     </thead>
     <tbody>
       <% @dates.each do |day| %>
-        <% 
-    css_class = 
-    case %w{日 月 火 水 木 金 土}[day.worked_on.wday]
-    when '土'
-      'text-primary'
-    when '日'
-      'text-danger'
-    end
-  %>
+        <% css_class = case %w{日 月 火 水 木 金 土}[day.worked_on.wday]
+        when '土'
+          'text-primary'
+        when '日'
+          'text-danger'
+        end %>
         <tr>
           <td><%= day.worked_on.to_s(:date) %></td>
           <td class="<%= css_class %>"><%= %w{日 月 火 水 木 金 土}[day.worked_on.wday] %></td>

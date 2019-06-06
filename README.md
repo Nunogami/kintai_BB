@@ -10,4 +10,21 @@
 # Attendance.new(id: 3, worked_on: "2019-05-02", started_at: "2019-05-02 18:00:00", finished_at: "2019-05-02 08:00:00", note: "", user_id: 1)
 # attendance = Attendance.new(id: 3, worked_on: "2019-05-02", started_at: "2019-05-02 18:00:00", finished_at: "2019-05-02 08:00:00", note: "", user_id: 1)
 # attendance.save
-# attendance.errors.full_messages
+      <!--I can not edit the future from the day-->
+  <% if Date.today < Date.current %>
+    <%= af.time_field :started_at, :readonly => true, class: 'readonly' %>
+  <% else %>
+    <%= af.time_field :started_at, class: "form-control"  %>
+  <% end %>
+
+$ git add -A
+$ git commit -m "I can not edit the future from the day"
+$ git checkout master
+$ git merge basic-information
+
+$ git push
+$ git push heroku
+$ heroku pg:reset DATABASE
+$ heroku run rails db:migrate
+$ heroku run rails db:seed
+$ heroku restart
