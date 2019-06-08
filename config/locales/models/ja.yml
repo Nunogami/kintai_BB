@@ -18,3 +18,7 @@ ja:
         contains: 含まれています。
         department: 所属
         password_confirmation: パスワード確認
+        basic_time: 指定勤務時間
+        work_time: 基本勤務時間
+        previous_label: 前へ
+        Next_Label: 次へ

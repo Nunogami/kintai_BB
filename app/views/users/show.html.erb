@@ -55,20 +55,15 @@
           <td><%= day.started_at.to_s(:hour) if day.started_at.present? %></td>
           <td><%= day.started_at.to_s(:min) if day.started_at.present? %></td>
           <td>
-           <% if day.worked_on == Date.today && day.started_at.nil? %>
+            <% if day.worked_on == Date.today && day.started_at.nil? %>
               <%= button_to "出社", user_attendances_path(@user), class: "btn btn-xs btn-primary" %>
-           <% end %>
+            <% end %>
           </td>
           <td><%= day.finished_at.to_s(:hour) if day.finished_at.present? %></td>
           <td><%= day.finished_at.to_s(:min) if day.finished_at.present? %></td>
           <td>
             <% if day.worked_on == Date.today && day.started_at.present? && day.finished_at.nil? %>
               <%= button_to "退社", user_attendances_path(@user), class: "btn btn-xs btn-primary" %>
-            <% end %>
-          </td>
-          <td>
-            <% if day.started_at.present? && day.finished_at.present? %>
-              <%= working_times(day.started_at, day.finished_at) %>
             <% end %>
           </td>
           <td>

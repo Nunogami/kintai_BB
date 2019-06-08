@@ -28,7 +28,7 @@
         <td>
           
           <% if day.worked_on > Date.today %>
-            <%= af.time_field :started_at, :readonly => true, class: 'readonly' %>
+            <%= af.time_field :started_at, :readonly => true, class: 'form-control' %>
           <% else %>
             <%= af.time_field :started_at, class: "form-control"  %>
           <% end %>
@@ -37,7 +37,7 @@
         <td>
           
           <% if day.worked_on > Date.today %>
-             <%= af.time_field :finished_at, :readonly => true, class: 'readonly' %>
+             <%= af.time_field :finished_at, :readonly => true, class: 'form-control' %>
           <% else %>   
              <%= af.time_field :finished_at, class: "form-control" %>
           <% end %>   
@@ -51,7 +51,7 @@
         <td>
           
           <% if day.worked_on > Date.today %>
-             <%= af.text_field :note, :readonly => true, class: 'readonly' %>
+             <%= af.text_field :note, :readonly => true, class: 'form-control' %>
           <% else %>
             <%= af.text_field :note, class: "form-control" %>
           <% end %> 

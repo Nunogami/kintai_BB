@@ -18,7 +18,7 @@
   <% end %>
 
 $ git add -A
-$ git commit -m "I can not edit the future from the day"
+$ git commit -m "finished up to additional function 8"
 $ git checkout master
 $ git merge basic-information
 
@@ -28,3 +28,26 @@ $ heroku pg:reset DATABASE
 $ heroku run rails db:migrate
 $ heroku run rails db:seed
 $ heroku restart
+
+$ rails c
+[1] pry(main)&gt; user = User.find(3)
+[2] pry(main)&gt; user.update_attribute :admin, true
+
+
+<% if current_user.try(:admin?) %>
+      <div class="page-header">
+        <h1>管理者マイページ</h1>
+      </div>
+      <p class="admin_btn col-xs-offset-1 col-xs-10 col-xs-offset-1"><%= link_to "管理画面", "/admin" %></p>
+    <% else %>
+      <div class="page-header">
+        <h1>マイページ<br>
+          <small><%= current_user.name %>さん、こんにちは！</small>
+        </h1>
+      </div>
+      <p>マイページでは学習進捗を確認できます。<br>
+         自分の学習進捗に合わせてカリキュラムを選んでください。
+      </p>
+    <% end %>
+
+rails console --sandbox
