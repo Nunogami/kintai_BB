@@ -18,7 +18,7 @@
   <% end %>
 
 $ git add -A
-$ git commit -m "Additional function 9.1 completed"
+$ git commit -m "Additional function 9.2 completed"
 $ git checkout master
 $ git merge basic-information
 
