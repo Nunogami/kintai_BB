@@ -8,7 +8,7 @@
      <%= label_tag :name, "ユーザー名検索" %>
     </div>
     <div style="display:inline-flex">
-     <form>
+     <form class="form-group">
          <%= text_field_tag :name, params[:name],:placeholder => "キーワードで検索", class: 'form-control'  %>
          <span><%= submit_tag "検索", class: "btn btn-primary" %></span>
      </form>

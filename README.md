@@ -18,7 +18,7 @@
   <% end %>
 
 $ git add -A
-$ git commit -m "Additional function 9 completed"
+$ git commit -m "Additional function 9.1 completed"
 $ git checkout master
 $ git merge basic-information
 
@@ -56,3 +56,5 @@ rails console --sandbox
 <!--<%= select_tag :gender, options_for_select(User.genders), include_blank: true %>-->
 
 .floor_to(15.minutes)
+
+https://cryptic-peak-58402.herokuapp.com/
