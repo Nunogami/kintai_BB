@@ -18,7 +18,7 @@
   <% end %>
 
 $ git add -A
-$ git commit -m "finished up to additional function 8"
+$ git commit -m "Additional function 8 completed"
 $ git checkout master
 $ git merge basic-information
 
@@ -51,3 +51,6 @@ $ rails c
     <% end %>
 
 rails console --sandbox
+
+<!--<%= label_tag :name, "性別" %>-->
+<!--<%= select_tag :gender, options_for_select(User.genders), include_blank: true %>-->

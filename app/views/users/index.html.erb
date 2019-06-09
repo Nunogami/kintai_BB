@@ -1,6 +1,26 @@
 <% provide(:title, '一覧') %>
 <h1>ユーザ一覧</h1>
 
+
+<div class="input-group">
+   <%= form_tag(users_path, method: "get") do %>
+    <div>
+     <%= label_tag :name, "ユーザー名検索" %>
+    </div>
+    <div style="display:inline-flex">
+     <form>
+         <%= text_field_tag :name, params[:name],:placeholder => "キーワードで検索", class: 'form-control'  %>
+         <span><%= submit_tag "検索", class: "btn btn-primary" %></span>
+     </form>
+     
+    </div>
+   <% end %>
+</div>
+
+
+
+
+<div class="will_paginate">
 <%= will_paginate @users, :previous_label => '&lt 前へ', :next_label => '次へ &gt' %>
 
 <ul class="users">
@@ -8,3 +28,4 @@
 </ul>
 
 <%= will_paginate @users, :previous_label => '&lt 前へ', :next_label => '次へ &gt' %>
+</div>

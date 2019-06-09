@@ -5,7 +5,16 @@ class UsersController < ApplicationController
   
   def index
     @users = User.paginate(page: params[:page])
+    # パラメータとして名前か性別を受け取っている場合は絞って検索する
+    if params[:name].present?
+    @users = @users.get_by_name params[:name]
+    end
+    if params[:gender].present?
+    @users = @users.get_by_gender params[:gender]
+    end
   end
+  
+
 
   def show
   @user = User.find(params[:id])
