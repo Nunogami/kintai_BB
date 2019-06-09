@@ -18,7 +18,7 @@
   <% end %>
 
 $ git add -A
-$ git commit -m "Additional function 8 completed"
+$ git commit -m "Additional function 9 completed"
 $ git checkout master
 $ git merge basic-information
 
@@ -54,3 +54,5 @@ rails console --sandbox
 
 <!--<%= label_tag :name, "性別" %>-->
 <!--<%= select_tag :gender, options_for_select(User.genders), include_blank: true %>-->
+
+.floor_to(15.minutes)

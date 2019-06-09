@@ -9,8 +9,8 @@
         <%= link_to "→", user_path(params: {id: @user.id, first_day: @first_day.next_month }),
                          class: "btn btn-xs btn-primary" %>
       </td>
-      <td>指定勤務時間　<%= format_basic_time(@user.work_time) %></td>
-      <td>基本時間　<%= format_basic_time(@user.basic_time) %></td>
+      <td>指定勤務時間　<%= format_basic_time(@user.work_time.floor_to(15.minutes)) %></td>
+      <td>基本時間　<%= format_basic_time(@user.basic_time.floor_to(15.minutes)) %></td>
       <td>初日　<%= @first_day.to_s(:date) %></td>
     </tr>
 
@@ -53,14 +53,14 @@
           <td><%= day.worked_on.to_s(:date) %></td>
           <td class="<%= css_class %>"><%= %w{日 月 火 水 木 金 土}[day.worked_on.wday] %></td>
           <td><%= day.started_at.to_s(:hour) if day.started_at.present? %></td>
-          <td><%= day.started_at.to_s(:min) if day.started_at.present? %></td>
+          <td><%= day.started_at.floor_to(15.minutes).to_s(:min) if day.started_at.present? %></td>
           <td>
             <% if day.worked_on == Date.today && day.started_at.nil? %>
               <%= button_to "出社", user_attendances_path(@user), class: "btn btn-xs btn-primary" %>
             <% end %>
           </td>
           <td><%= day.finished_at.to_s(:hour) if day.finished_at.present? %></td>
-          <td><%= day.finished_at.to_s(:min) if day.finished_at.present? %></td>
+          <td><%= day.finished_at.floor_to(15.minutes).to_s(:min) if day.finished_at.present? %></td>
           <td>
             <% if day.worked_on == Date.today && day.started_at.present? && day.finished_at.nil? %>
               <%= button_to "退社", user_attendances_path(@user), class: "btn btn-xs btn-primary" %>
@@ -68,7 +68,7 @@
           </td>
           <td>
             <% if day.started_at.present? && day.finished_at.present? %>
-              <%= working_times(day.started_at, day.finished_at) %>
+              <%= working_times(day.started_at.floor_to(15.minutes), day.finished_at.floor_to(15.minutes)) %>
               <% seconds = (day.finished_at - day.started_at).to_i %>
               <% @total_seconds = @total_seconds.to_i + seconds %>
             <% end %>
