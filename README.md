@@ -58,3 +58,23 @@ rails console --sandbox
 .floor_to(15.minutes)
 
 https://cryptic-peak-58402.herokuapp.com/
+
+[master (root-commit) 537626c] first commit
+ Committer: EC2 Default User <ec2-user@ip-172-31-27-109.us-east-2.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0yTHESJhrvOZIBxif5SFvBCkDqRcTwOKTQRK+3rf5Jqc7tJAFLHzE1t8uLiGPnZarOs6MRNKsUtyj0Km6lvnV/NqrGTFId3HwuopBwtAvcCXh1oJPBZ3xUrmFgDjUNi7Dfk3uTZfludOOL5W9CsJkYpnHIykYoBKCfVVb6k2euFTv4nAj+wzrdnzjPW851CMQGbaEnLtGL5UP5TwheLQSebr9X96c/7AdY2o6IkV+ZT7509vvpZ4W2CBiotUkzkjFEFjL7HeatIC20e/Ro1/bWjM+sRruiYChudsuCkt2MxI4Y3CBbYRjwz85g001a7zhgTKt8YcdZ2n0nH/DeOa1 
+
+Additional function 9.3 completed
