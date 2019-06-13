@@ -18,7 +18,7 @@
   <% end %>
 
 $ git add -A
-$ git commit -m "Additional function 9.2 completed"
+$ git commit -m "Additional function 9.4 completed"
 $ git checkout master
 $ git merge basic-information
 
@@ -76,5 +76,3 @@ After doing this, you may fix the identity used for this commit with:
  create mode 100644 README.md
 
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0yTHESJhrvOZIBxif5SFvBCkDqRcTwOKTQRK+3rf5Jqc7tJAFLHzE1t8uLiGPnZarOs6MRNKsUtyj0Km6lvnV/NqrGTFId3HwuopBwtAvcCXh1oJPBZ3xUrmFgDjUNi7Dfk3uTZfludOOL5W9CsJkYpnHIykYoBKCfVVb6k2euFTv4nAj+wzrdnzjPW851CMQGbaEnLtGL5UP5TwheLQSebr9X96c/7AdY2o6IkV+ZT7509vvpZ4W2CBiotUkzkjFEFjL7HeatIC20e/Ro1/bWjM+sRruiYChudsuCkt2MxI4Y3CBbYRjwz85g001a7zhgTKt8YcdZ2n0nH/DeOa1 
-
-Additional function 9.3 completed
