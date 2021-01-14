@@ -14,7 +14,7 @@ gem 'jquery-rails', '4.3.1'
 gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.7.0'
 gem 'rails-i18n',   '5.1.3'
-gem 'rails_admin', '~> 1.3'
+gem 'rails_admin', '~> 1.4'
 gem 'cancancan', '~> 2.0'
 gem 'rounding'
 
